@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    </head>
+    <body class="bg-gray-100 font-sans leading-normal text-grey-800">
+        <!-- Header Menu -->
+        <header class="text-gray-100 bg-blue-500 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Laraveller</span>
+              </a>
+              <form action="/search">
+                <input type="search" class="ml-4 p-2 text-grat-900 rounded" name="q" placeholder="Search">
+                
+            </form>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                {{ nav:main_nav }}
+                <a href="{{ url }}" class="mr-5 hover:text-gray-900">{{ title }}</a>
+                {{ /nav:main_nav }}
+              </nav>
+            
+            </div>
+          </header>
+        <!-- End Header Menu --> 
+
+            <div class="max-w-6xl mx-auto">
+                 {{ template_content }}
+            </div>
+           
+      
+        <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>

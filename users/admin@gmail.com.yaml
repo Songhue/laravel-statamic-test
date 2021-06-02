@@ -1,0 +1,9 @@
+name: laraveller
+super: true
+avatar: 242-2426899_software-developer.png
+id: 0c883cb1-7cc6-4440-a8c6-2149f537a636
+password_hash: $2y$10$.QCvU/3QPl7eQUOk6Mg4uOWmM99x0oBE.cCJXBhA0wCZBbTG5lneq
+preferences:
+  taxonomies:
+    tags:
+      after_save: create_another
